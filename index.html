@@ -2,18 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore Amr El-Qattan's professional portfolio featuring front-end development projects, including React JS applications, responsive web designs, and innovative UI/UX solutions.">
-    <meta name="keywords" content="Amr El-Qattan, Elkattan, Front-End Developer, Web Development, React JS, JavaScript, Responsive Design, Portfolio">
-    <meta name="author" content="Amr El-Qattan">
+    <meta
+      name="description"
+      content="Explore Amr El-Qattan's professional portfolio featuring front-end development projects, including React JS applications, responsive web designs, and innovative UI/UX solutions."
+    />
+    <meta
+      name="keywords"
+      content="Amr El-Qattan, Elkattan, Front-End Developer, Web Development, React JS, JavaScript, Responsive Design, Portfolio"
+    />
+    <meta name="author" content="Amr El-Qattan" />
 
     <title>Amr El-Qattan - Front-End Developer Portfolio</title>
 
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
 
     <!-- css style -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- sweet alert -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
 
     <!-- boxicons -->
     <link
@@ -58,7 +70,10 @@
             <h3>hello i'm</h3>
             <h1>Amr El-Qattan</h1>
             <h3>front-End developer</h3>
-            <p class="desc">Welcome to my portfolio website. I specialize in creating dynamic and responsive web applications.</p>
+            <p class="desc">
+              Welcome to my portfolio website. I specialize in creating dynamic
+              and responsive web applications.
+            </p>
             <div class="btn-sci">
               <div class="sci">
                 <a target="_blank" href="https://github.com/AmrEl-Qattan">
@@ -540,7 +555,7 @@
 
               <div class="tab-item portfolio-item">
                 <div class="portfolio-icon service-icon">
-                  <i class='bx bxl-sketch icon' ></i>
+                  <i class="bx bxl-sketch icon"></i>
                   <a href="#"><i class="bx bx-arrow-back"></i></a>
                 </div>
                 <h4>Responsive Web Design</h4>
@@ -562,14 +577,43 @@
         <section class="section contact active">
           <h2 class="title">contact</h2>
           <div class="contact-wrapper">
-            <form action="https://formspree.io/f/xdkonpor" method="post" class="contact-form">
+            <form class="contact-form" onsubmit="sendMail(event)">
               <h3>let's work together!</h3>
               <div class="field-box">
-                <input id="name" name="name" type="text" placeholder="Full Name" required />
-                <input id="email" name="email" type="email" placeholder="Your Email" required />
-                <input id="phone" name="phone" type="tel" placeholder="Phone Number" required />
-                <input id="ubject" name="Subject" type="text" placeholder="Email Subject" required />
-                <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Phone Number"
+                  required
+                />
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Email Subject"
+                  required
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
               </div>
               <div class="contact-btn">
                 <button type="submit" class="btn">send message</button>
@@ -580,7 +624,25 @@
       </div>
     </div>
 
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- main js -->
     <script src="js/main.js"></script>
+
+    <!-- email js -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "CaOrALtRLTXFujShB",
+        });
+      })();
+    </script>
   </body>
 </html>
